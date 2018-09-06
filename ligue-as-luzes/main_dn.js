@@ -47,28 +47,20 @@ for (const [row_index, row] of matrix.entries()) {
 			// de todos os elementos pintados.
 			for (const painted_cell of document.querySelectorAll("td.painted")) {
 				painted_cell.classList.remove("painted")
-				painted_cell.style.backgroundColor="white"
+			}	
+
+		
+			// Agora pinte todos os elementos
+			// da mesma linha do elemento atual.
+			for (const cell_to_paint of matrix[row_index]) {
+				cell_to_paint.classList.add("painted")
 			}
-
-
-		cell.classList.add("painted")
-		var banana = Math.floor (Math.random()*16777215).toString(16)
-		console.log (banana)
-
-		cell.style.backgroundColor=`#${banana}`
-		// 	// Agora pinte todos os elementos
-		// 	// da mesma linha do elemento atual.
-		// 	for (const cell_to_paint of matrix[row_index]) {
-		// 		cell_to_paint.classList.add("painted")
 		
-			
-		// }	
-		// 	// Agora pinte todos os elementos
-		// 	// da mesma coluna do elemento atual.
-		// 	for (const row_to_paint of matrix) {
-		// 		row_to_paint[cell_index].classList.add("painted_row")
-		// 	}
-		
+			// Agora pinte todos os elementos
+			// da mesma coluna do elemento atual.
+			for (const row_to_paint of matrix) {
+				row_to_paint[cell_index].classList.add("painted_row")
+			}
 		
 		})
 	}

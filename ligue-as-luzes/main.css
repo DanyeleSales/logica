@@ -27,13 +27,16 @@ table tr {
 table td {
 	width: 20px;
 	border: 1px solid blue;
-	text-align: center;
-	font-weight: 700;
+
 	transition: box-shadow 150ms;
 }
 
 table td.painted {
-	background-color: yellow;
+	background-color:greenyellow;
+	border-radius: 100%;
+}
+table td.painted_row {
+	background-color: green;
 }
 
 table td:hover {
